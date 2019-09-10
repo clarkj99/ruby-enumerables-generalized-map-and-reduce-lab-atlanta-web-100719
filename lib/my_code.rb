@@ -7,7 +7,7 @@ def map (source_array)
   new_array
 end
 
-def reduce (source_array)
+def reduce (source_array, starting_point=0)
   new_array =[]
   source_array.length.times do |index| 
      new_array.push (yield (source_array[index]))
