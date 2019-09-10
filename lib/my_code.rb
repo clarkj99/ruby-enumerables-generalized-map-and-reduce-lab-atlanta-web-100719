@@ -8,9 +8,9 @@ def map (source_array)
 end
 
 def reduce (source_array, starting_point=0)
-  memo = starting_point
+  total = starting_point
   source_array.length.times do |index| 
-     memo =  (yield (source_array[index]))
+     total =  (yield (source_array[index], total))
   end
-  new_array
+  total
 end
